@@ -1,8 +1,7 @@
 package sample.example.groupid;
 
-import org.bukkit.entity.Creature;
-import org.bukkit.entity.CreatureType;
 import org.bukkit.entity.Entity;
+import org.bukkit.entity.EntityType;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerInteractEntityEvent;
@@ -37,35 +36,13 @@ public class SampleListener implements Listener {
     @EventHandler
     public void onPlayerInteract(PlayerInteractEntityEvent event) {
         final Entity entity = event.getRightClicked();
-        if (entity instanceof Creature) {
-            Creature creature = (Creature) entity;
-            StringBuilder sb = new StringBuilder("You interacted with a ");
-            sb.append(creature.getClass().getSimpleName());
-            short s = creatureIdFromCreature(creature);
-            if (s > 0) {
-                sb.append(" it has a id of ");
-                sb.append(s);
-            }
-        }
-    }
-    
-    /**
-     * This is an example of a helper method.
-     * 
-     * @param entity
-     *            you wish to get the creatureType Id of.
-     * @return the type id of the creature or -1 if the entity does not have a
-     *         creature id
-     */
-    private short creatureIdFromCreature(Creature entity) {
-        Class<?>[] interfaces = entity.getClass().getInterfaces();
-        if (interfaces.length == 1) {
-            Class<?> clazz = interfaces[0];
-            CreatureType creatureType = CreatureType.fromName(clazz.getSimpleName());
-            if (creatureType != null) {
-                return creatureType.getTypeId();
-            }
-        }
-        return -1;
+        final EntityType entityType = entity.getType();
+
+        StringBuilder sb = new StringBuilder("You interacted with a ");
+        sb.append(entityType.getName());
+        sb.append(" it has an id of ");
+        sb.append(entityType.getTypeId());
+
+        event.getPlayer().sendMessage(sb.toString());
     }
 }
