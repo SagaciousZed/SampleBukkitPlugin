@@ -1,4 +1,4 @@
-package sample.example.groupid;
+package com.example.groupid;
 
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;

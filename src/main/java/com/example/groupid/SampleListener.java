@@ -1,4 +1,4 @@
-package sample.example.groupid;
+package com.example.groupid;
 
 import org.bukkit.entity.Entity;
 import org.bukkit.entity.EntityType;
