@@ -13,7 +13,7 @@ public class SampleCommandExecutor implements CommandExecutor {
     private final SamplePlugin plugin;
 
     /*
-     * This command exectuor needs to know about its plugin from which it came from
+     * This command executor needs to know about its plugin from which it came from
      */
     public SampleCommandExecutor(SamplePlugin plugin) {
         this.plugin = plugin;
