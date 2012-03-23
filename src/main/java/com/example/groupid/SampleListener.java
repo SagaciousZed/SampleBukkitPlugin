@@ -1,6 +1,7 @@
 package com.example.groupid;
 
-import org.bukkit.entity.Entity;
+import java.text.MessageFormat;
+
 import org.bukkit.entity.EntityType;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
@@ -35,14 +36,11 @@ public class SampleListener implements Listener {
      */
     @EventHandler
     public void onPlayerInteract(PlayerInteractEntityEvent event) {
-        final Entity entity = event.getRightClicked();
-        final EntityType entityType = entity.getType();
+        final EntityType entityType = event.getRightClicked().getType();
 
-        StringBuilder sb = new StringBuilder("You interacted with a ");
-        sb.append(entityType.getName());
-        sb.append(" it has an id of ");
-        sb.append(entityType.getTypeId());
-
-        event.getPlayer().sendMessage(sb.toString());
+        event.getPlayer().sendMessage(MessageFormat.format(
+                "You interacted with a {0} it has an id of {1}",
+                entityType.getName(),
+                entityType.getTypeId()));
     }
 }
