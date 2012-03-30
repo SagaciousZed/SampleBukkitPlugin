@@ -2,7 +2,7 @@
 # For more infomration refer to http://wiki.bukkit.org/Plugin_YAML
 main: sample.example.groupid.SamplePlugin
 name: SamplePlugin
-version: 1.0.0
+version: ${project.version}
 author: SampleAuthor
 description: This is a sample plugin
 commands:
