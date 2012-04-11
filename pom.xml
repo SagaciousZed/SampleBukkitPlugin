@@ -27,7 +27,7 @@
       <groupId>org.bukkit</groupId>
       <artifactId>bukkit</artifactId>
       <!-- Bukkit API Version, change to match if out of sync -->
-      <version>1.2.5-R1.0</version>
+      <version>1.2.5-R1.2-SNAPSHOT</version>
       <scope>provided</scope>
     </dependency>
     <dependency>
@@ -47,10 +47,13 @@
 
   <build>
     <resources>
-      <resource>
-        <directory>${basedir}/src/main/resources</directory>
-        <filtering>true</filtering>
-      </resource>
+  <resource>
+    <directory>${basedir}/src/main/resources</directory>
+    <filtering>true</filtering>
+    <includes>
+      <include>**/*.yml</include>
+    </includes>
+  </resource>
     </resources>
     <plugins>
       <plugin>
