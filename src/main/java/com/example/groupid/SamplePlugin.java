@@ -13,7 +13,7 @@ public class SamplePlugin extends JavaPlugin {
     public void onEnable() {
         // Register the listener
         this.getServer().getPluginManager().registerEvents(new SampleListener(this), this);
-        // set the command executor
+        // set the command executor for sample
         this.getCommand("sample").setExecutor(new SampleCommandExecutor(this));
     }
     
