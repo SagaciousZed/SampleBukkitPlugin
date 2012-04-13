@@ -1,6 +1,6 @@
 # This is a sample plugin.yml
 # For more infomration refer to http://wiki.bukkit.org/Plugin_YAML
-main: sample.example.groupid.SamplePlugin
+main: com.example.groupid.SamplePlugin
 name: SamplePlugin
 version: ${project.version}
 author: SampleAuthor
