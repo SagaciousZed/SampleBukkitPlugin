@@ -18,6 +18,9 @@ public class SampleListener implements Listener {
      * This listener needs to know about the plugin which it came from
      */
     public SampleListener(SamplePlugin plugin) {
+        // Register the listener
+        plugin.getServer().getPluginManager().registerEvents(this, plugin);
+        
         this.plugin = plugin;
     }
 

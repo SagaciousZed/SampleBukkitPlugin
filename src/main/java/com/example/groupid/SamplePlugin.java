@@ -11,8 +11,9 @@ public class SamplePlugin extends JavaPlugin {
      */
     @Override
     public void onEnable() {
-        // Register the listener
-        this.getServer().getPluginManager().registerEvents(new SampleListener(this), this);
+        // Create the SampleListener
+        new SampleListener(this);
+        
         // set the command executor for sample
         this.getCommand("sample").setExecutor(new SampleCommandExecutor(this));
     }
