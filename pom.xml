@@ -27,7 +27,7 @@
       <groupId>org.bukkit</groupId>
       <artifactId>bukkit</artifactId>
       <!-- Bukkit API Version, change if out dated -->
-      <version>1.2.5-R3.0</version>
+      <version>1.2.5-R4.0</version>
       <type>jar</type>
       <scope>provided</scope>
     </dependency>
