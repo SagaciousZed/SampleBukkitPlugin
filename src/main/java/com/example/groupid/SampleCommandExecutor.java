@@ -10,12 +10,12 @@ import com.google.common.base.Joiner;
  * This is a sample CommandExectuor
  */
 public class SampleCommandExecutor implements CommandExecutor {
-    private final SamplePlugin plugin;
+    private final Sample plugin;
 
     /*
      * This command executor needs to know about its plugin from which it came from
      */
-    public SampleCommandExecutor(SamplePlugin plugin) {
+    public SampleCommandExecutor(Sample plugin) {
         this.plugin = plugin;
     }
 

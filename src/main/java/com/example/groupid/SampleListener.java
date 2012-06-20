@@ -12,12 +12,12 @@ import org.bukkit.event.player.PlayerJoinEvent;
  * This is a sample event listener
  */
 public class SampleListener implements Listener {
-    private final SamplePlugin plugin;
+    private final Sample plugin;
 
     /*
      * This listener needs to know about the plugin which it came from
      */
-    public SampleListener(SamplePlugin plugin) {
+    public SampleListener(Sample plugin) {
         // Register the listener
         plugin.getServer().getPluginManager().registerEvents(this, plugin);
         
