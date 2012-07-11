@@ -39,7 +39,7 @@
       <type>jar</type>
       <scope>provided</scope>
     </dependency>
-    <!-- Testing only, remove if not needed -->
+    <!-- Testing dependencies -->
     <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
@@ -50,14 +50,21 @@
   </dependencies>
 
   <build>
-    <!-- Filter *.yml files -->
+    <!-- Filter only plugin.yml -->
     <resources>
       <resource>
-        <directory>${basedir}/src/main/resources</directory>
+        <directory>src/main/resources</directory>
         <filtering>true</filtering>
         <includes>
-          <include>**/*.yml</include>
+          <include>plugin.yml</include>
         </includes>
+      </resource>
+      <resource>
+        <directory>src/main/resources</directory>
+        <filtering>false</filtering>
+        <excludes>
+            <exclude>plugin.yml</exclude>
+        </excludes>
       </resource>
     </resources>
     <plugins>

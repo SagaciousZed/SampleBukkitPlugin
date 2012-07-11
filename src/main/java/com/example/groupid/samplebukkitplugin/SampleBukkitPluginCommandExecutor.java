@@ -1,4 +1,4 @@
-package com.example.groupid;
+package com.example.groupid.samplebukkitplugin;
 
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
@@ -9,13 +9,13 @@ import com.google.common.base.Joiner;
 /*
  * This is a sample CommandExectuor
  */
-public class SampleCommandExecutor implements CommandExecutor {
-    private final Sample plugin;
+public class SampleBukkitPluginCommandExecutor implements CommandExecutor {
+    private final SampleBukkitPlugin plugin;
 
     /*
      * This command executor needs to know about its plugin from which it came from
      */
-    public SampleCommandExecutor(Sample plugin) {
+    public SampleBukkitPluginCommandExecutor(SampleBukkitPlugin plugin) {
         this.plugin = plugin;
     }
 

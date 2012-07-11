@@ -1,4 +1,4 @@
-package com.example.groupid;
+package com.example.groupid.samplebukkitplugin;
 
 import java.text.MessageFormat;
 
@@ -11,13 +11,13 @@ import org.bukkit.event.player.PlayerJoinEvent;
 /*
  * This is a sample event listener
  */
-public class SampleListener implements Listener {
-    private final Sample plugin;
+public class SampleBukkitPluginListener implements Listener {
+    private final SampleBukkitPlugin plugin;
 
     /*
      * This listener needs to know about the plugin which it came from
      */
-    public SampleListener(Sample plugin) {
+    public SampleBukkitPluginListener(SampleBukkitPlugin plugin) {
         // Register the listener
         plugin.getServer().getPluginManager().registerEvents(this, plugin);
         

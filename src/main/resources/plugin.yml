@@ -1,10 +1,11 @@
 # This is a sample plugin.yml
 # For more infomration refer to http://wiki.bukkit.org/Plugin_YAML
-main: com.example.groupid.Sample
-name: SamplePlugin
+# This file uses maven resource filtering to fill in values at compile time
+main: com.example.groupid.samplebukkitplugin.SampleBukkitPlugin
+name: ${project.name}
 version: ${project.version}
-author: SampleAuthor
-description: This is a sample plugin
+author: ExampleAuthor
+description: ${project.description}
 commands:
   sample:
     description: set the sample message

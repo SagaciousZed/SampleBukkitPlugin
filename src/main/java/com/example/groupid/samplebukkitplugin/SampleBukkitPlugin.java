@@ -1,21 +1,21 @@
-package com.example.groupid;
+package com.example.groupid.samplebukkitplugin;
 
 import org.bukkit.plugin.java.JavaPlugin;
 
 /*
  * This is the main class of the sample plug-in
  */
-public class Sample extends JavaPlugin {
+public class SampleBukkitPlugin extends JavaPlugin {
     /*
      * This is called when your plug-in is enabled
      */
     @Override
     public void onEnable() {
-        // Create the SampleListener
-        new SampleListener(this);
+        // Create the SampleBukkitPluginListener
+        new SampleBukkitPluginListener(this);
         
         // set the command executor for sample
-        this.getCommand("sample").setExecutor(new SampleCommandExecutor(this));
+        this.getCommand("sample").setExecutor(new SampleBukkitPluginCommandExecutor(this));
     }
     
     /*
