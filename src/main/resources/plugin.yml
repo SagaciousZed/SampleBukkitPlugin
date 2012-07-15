@@ -9,7 +9,7 @@ description: ${project.description}
 commands:
   sample:
     description: set the sample message
-    usage: /<command> [message]
+    usage: /<command> message
     permission: sample.message
 permissions:
   sample.*:
