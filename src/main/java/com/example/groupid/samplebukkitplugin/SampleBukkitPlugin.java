@@ -11,6 +11,9 @@ public class SampleBukkitPlugin extends JavaPlugin {
      */
     @Override
     public void onEnable() {
+        // save the configuration file
+        saveDefaultConfig();
+        
         // Create the SampleBukkitPluginListener
         new SampleBukkitPluginListener(this);
         
@@ -23,9 +26,7 @@ public class SampleBukkitPlugin extends JavaPlugin {
      */
     @Override
     public void onDisable() {        
-        // save the configuration file, if there are no values, write the defaults.
-        this.getConfig().options().copyDefaults(true);
-        this.saveConfig();
+        
     }
 
 }
