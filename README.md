@@ -22,5 +22,5 @@ therefore managed by Maven. You should be able to build it with Maven by running
 
     mvn package
 
-a jar will be generated in the target folder. For those unfaimilliar with Maven
+a jar will be generated in the target folder. For those unfamiliar with Maven
 it is a build system, see http://maven.apache.org/ for more information.
