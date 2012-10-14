@@ -5,7 +5,7 @@ import org.bukkit.plugin.java.JavaPlugin;
 /*
  * This is the main class of the sample plug-in
  */
-public class SampleBukkitPlugin extends JavaPlugin {
+public final class SampleBukkitPlugin extends JavaPlugin {
     /*
      * This is called when your plug-in is enabled
      */
