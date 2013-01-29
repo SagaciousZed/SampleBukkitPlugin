@@ -23,7 +23,8 @@ public class SampleBukkitPluginCommandExecutor implements CommandExecutor {
      * On command set the sample message
      */
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
-        if (sender.hasPermission("sample.message") && args.length > 0) {
+        // Permission check is done by Bukkit
+        if (args.length > 0) {
             this.plugin.getConfig().set("sample.message", Joiner.on(' ').join(args));
             return true;
         } else {
