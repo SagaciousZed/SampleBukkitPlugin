@@ -27,7 +27,7 @@
       <groupId>org.bukkit</groupId>
       <artifactId>bukkit</artifactId>
       <!-- Bukkit API Version, change if out dated -->
-      <version>1.4.5-R0.2</version>
+      <version>1.5.2-R1.0</version>
       <type>jar</type>
       <scope>provided</scope>
     </dependency>
@@ -35,7 +35,7 @@
     <dependency>
       <groupId>com.google.guava</groupId>
       <artifactId>guava</artifactId>
-      <version>10.0</version>
+      <version>10.0.1</version>
       <type>jar</type>
       <scope>provided</scope>
     </dependency>
